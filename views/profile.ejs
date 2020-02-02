@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>About Tom Jagger</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <main>
+      <div class="profile">
+        <div class="profile-image" style="background: url('/images/<%= person.imgSrc %>') top center
+          no-repeat; background-size: cover;">
+        </div>
+        <div class="profile-details">
+          <h1 class="profile-name"><%= person.firstname %> <%= person.lastname %></h1>
+          <h2 class="profile-tagline"><%= person.tagline %></h2>
+          <p class="profile-bio"><%= person.bio %></p>
+          <a class="button button-twitter" href="<%= person.twitter %>">Follow me on Twitter</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

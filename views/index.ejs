@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<main>
+		<header class="header">
+			<h1>Homepage</h1>
+		</header>
+		<div class="container">
+			<%
+				people.forEach(function(person,i){
+			%>
+			<div class="person">
+				<div class="person-image" style="background: url('/images/<%= person.imgSrc%>') top center
+			        no-repeat; background-size: cover;">
+			    </div>
+		        <h2 class="person-name"><%= person.firstname %> <%= person.lastname %></h2>
+		        <a href="/profile?id=<%= person.id %>">View Profile</a>
+		    </div>
+		    <% }); %>
+		</div>
+    </main>
+    </body>
+</html>
